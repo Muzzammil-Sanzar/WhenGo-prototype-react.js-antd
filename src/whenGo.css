@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+body{
+    font-family: Poppins;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-justify{
+    text-align: justify;
+}
+
+.position{
+    margin: 0 auto
+}
+
+.div-spacing{
+    margin-top: 50px;
+    margin-bottom: 75px;
+}
+
+.button-color{
+    background-color: #3b9850;
+    color: white;
+}
+
+.background-color{
+    background-color: #f6fff6;
+    padding-top: 50px;
+    padding-bottom: 75px;
+}
+.color{
+    color: #3b9850 !important;
+}
+
+.width {
+    width: 85%;
+}
+
+.title{
+    font-size: 2rem !important;
+}
+/* ********************** NAV CSS **************** */
+.header{
+    background-color: #f6fff6;
+    height: 8vh;
+    padding-top: 1.5rem;
+}
+
+.nav-title{
+    background-color: #f6fff6;
+    float: left;
+    line-height: 1.6 !important;
+}
+
+.nav-menu{
+    background-color: #f6fff6;
+    width: 45%;
+    float: right;
+    border: none;
+    justify-content: flex-end;
+}
+
+/* ********** LANDING CSS ****************** */
+.landing{
+    background-color: #f6fff6;
+    padding-bottom: 65px;
+}
+.gutter-box {
+    padding-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.title-padding{
+    padding-top: 2.3rem ;
+}
+
+.landing-title{
+    font-size: 3rem !important;
+}
+
+.download-button{
+    /* width: 45%; */
+    height: 40px;
+    border: none;
+    font-weight: 700;
+}
+
+/* ***************** OUR SERVICES CSS **************** */
+
+.services-text{
+    width: 70%;
+}
+
+.services-title-text{
+    width: 68%;
+    margin-bottom: 40px;
+}
+
+.services-card{
+    border: 1px solid rgba(87, 111, 114, 0.4) !important;
+    border-radius: 9px;
+}
+
+/* ***********  WORK WITH US ************************ */
+
+.work-title{
+    margin-top: 20px;
+}
+
+/* ********************* question section ***************** */
+
+.width-80{
+    width: 80%;
+}
+
+.question-card{
+    margin-bottom: 20px;
+    background-color: white;
+}
+
+/* *********** FOOTER ************************* */
+
+.abled{
+    text-align: center;
+    display: none;
+}
+
+[data-theme='compact'] .site-collapse-custom-collapse .site-collapse-custom-panel,
+.site-collapse-custom-collapse .site-collapse-custom-panel {
+  margin-bottom: 24px;
+  overflow: hidden;
+  background: #f7f7f7;
+  border: 0px;
+  border-radius: 2px;
+}
+
+@media screen and (min-width: 1441px) and (max-width: 2711px) {
+    body {
+      /* background-color: yellow; */
+      color: white;
+    }
+    .title{
+        font-size: 4rem !important;
+    }
+    .text{
+        font-size: 1.6rem;
+    }
+    .download-button{
+        height: 60px;
+        font-size: 1.4rem !important;
+        font-weight: 600;
+    }
+    .abled{
+        display: block;
+    }
+
+    .nav-menu{
+        font-size: 1.8rem;
+    }
+    .links{
+        font-size: 1.4rem;
+    }
+    .nav-title{
+        font-size: 2.5rem !important;
+    }
+
+    .card-title{
+        font-size: 2.1rem !important;
+    }
+}
+
+@media screen and (min-width: 1190px) and (max-width: 1440px) {
+
+    .title{
+        font-size: 3.6rem !important;
+    }
+    .abled{
+        display: block;
+    }
+}
+
+
+@media screen and (min-width: 576px) and (max-width: 1000px) {
+    body {
+      /* background-color: brown; */
+      color: white;
+    }
+    .title{
+        font-size: 1.8rem !important;
+    }
+
+    .text{
+        font-size: 0.7rem;
+    }
+    .abled{
+        display: none;
+    }
+    .ine-width{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .title{
+        font-size: 1.5rem !important;
+    }
+    .text{
+        font-size: 0.7rem;
+    }
+    .nav-title{
+        font-size: 1.7rem !important;
+        padding-top: 10px;
+    }
+    .download-button{
+        height: 30px;
+        font-size: 0.6rem !important;
+    }
+    .ine-width{
+        width: 60%;
+    }
+}
