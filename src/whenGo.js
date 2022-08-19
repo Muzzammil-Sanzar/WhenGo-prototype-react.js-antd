@@ -120,25 +120,32 @@ function WhenGo(){
     return (
         <>
             <div className="landing">
-                <Header className="header">
-                    <Menu 
-                        mode="horizontal" 
-                        items={items1} 
-                        className='nav-menu'
-                    />
-                    <Title className="nav-title" >WhenGo</Title>
-                </Header>
+                <div className="text-center">
+                    <Header className="header">
+                        <Menu 
+                            mode="horizontal" 
+                            items={items1} 
+                            className='nav-menu'
+                        />
+                        <Title className="nav-title" >WhenGo</Title>
+                    </Header>
+                </div>
 
-                <Row justify="space-around" align="middle" gutter={[24]}
+                <Row justify="center" align="middle" gutter={[24]}
                     style= {{width: '100%', marginLeft: '0px',  }}>
 
                     <Col xs= {21} sm = {22} md={10}>
                         <Title className="title color title-padding">Moving Every <br/>
                             Customer With Care
                         </Title>
-                        <Text className="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                            Lorem Ipsum has been the industry's standard
-                        </Text>
+                        <div className="width-80">
+                            <Text className="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                                Lorem Ipsum has been the industry's standard
+                            </Text>
+                        </div>
+                        <div className="display-center">
+                            <img className="display-hide-nav" height= 'auto' src= {HeroVango} />
+                        </div>
                         <br/>
                         <br/>
                         <Space size={'large'}>
@@ -152,14 +159,45 @@ function WhenGo(){
                         <br/>
                     </Col>
                     
-                    <Col xs={23} sm={24} md = {11} className='gutter-box' style={{paddingLeft: '40px', paddingRight: '40px', paddingTop: 10}}>
-                        <Image className="image" height= 'auto' src= {HeroVango} />
+                    <Col xs={22} sm={24} md = {11} className='gutter-box' style={{paddingLeft: '40px', paddingRight: '40px', paddingTop: 10}}>
+                        <Image className="display-block-nav" height= 'auto' src= {HeroVango} />
                     </Col>
                 </Row>
             </div>
 
+            {/* **************************************** ABOUT US ********************************** */}
+            <section className="div-spacing">
+                <div  style={{width: '90%', margin: '0 auto'}}>
+                    <Row justify="space-around" align="middle" >
+                        <Col xs={24} sm={24} md={24} lg={12} >
+                            <Space direction="vertical" size='small'>
+                                <div className="display-center">
+                                    <Title className="title">About Us</Title>
+                                    <img src={AboutUs} className='display-hide' />
+                                </div>
+                                <div className="text-justify">
+                                    <Text className="text">
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                        It has survived not only five centuries, but also the leap into electronic typesetting, remaining
+                                        essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing 
+                                        Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including
+                                        versions of Lorem Ipsum.There are many variations of passages of Lorem Ipsum available, but the majority 
+                                        have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+                                    </Text>
+                                </div>
+                            </Space>
+                        </Col>
+                        <Col xs={24} sm={24} md={24} lg={11}>
+                            <Image width={'98%'} src={AboutUs} className='display-block'/>
+                        </Col>
+                    </Row>
+                </div>
+            </section>
+
             {/* ********* OUR SERVICES SECTION *********** */}
-            <div className="div-spacing">
+            <section className="div-spacing">
                 <div className="position text-center services-title-text">
                     <Title className="title">Our Services</Title>
                     <Text className="text">
@@ -234,18 +272,22 @@ function WhenGo(){
                         </Col>
                     </Row>
                 </div>
-            </div>
+            </section>
             
             {/* *********** Work With Us ************** */}
 
-            <div className="div-spacing">
+            <section className="div-spacing">
                 <div className="position" style={{width: '80%'}}>
-                    <Row gutter={[24]} justify="space-around" align="middle" >
+                    <Row gutter={[24]} type='flex' justify="space-around" align="middle" >
                         <Col xs={24} sm={24} md={24} lg={11}>
-                            <Image src={WorkWithUs}/>
+                            <Image src={WorkWithUs} className="display-block dispaly-block-work"/>
                         </Col>
-                        <Col xs={24} sm={24} md={24} lg={12} >
-                                <Title className="work-title title">Work With Us</Title>
+                        <Col xs={24} sm={24} md={24} lg={12} style={{justifyContent: 'center'}}>
+                            <div className="display-center" >
+                                <Title className="work-title title" >Work With Us</Title>
+                                <img  src={WorkWithUs} className="display-hide display-hide-work" />
+                                <br/>
+                            </div>
                                 <Space direction="vertical" size='large'>
                                     <div className="text-justify">
                                         <Text className="text">
@@ -265,10 +307,10 @@ function WhenGo(){
                         </Col>
                     </Row>
                 </div>
-            </div>
+            </section>
 
             {/* ************************ WHY CHOSE US ****************** */}
-            <div className="background-color">
+            <section className="background-color">
                 <div className="position text-center services-title-text" style={{width: '70%'}}>
                     <Title className="title">Why Chose Us</Title>
                     <Text className="text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
@@ -318,9 +360,9 @@ function WhenGo(){
                         </Col>
                     </Row>
                 </div>
-            </div>
+            </section>
             {/* ********************************* HOW WANGO WORKS ****************************** */}
-            <div className="div-spacing">
+            <section className="div-spacing">
                 <div className="width position">
                     <div className="text-center services-text position">
                         <Title className="title">
@@ -334,7 +376,7 @@ function WhenGo(){
                     <Divider style={{border: 'none'}}/>
                     <Tabs tabPosition={tabPosition} centered >
                         <TabPane tab={'Place Order'}  key='1'>
-                            <Row justify='space-around' align="middle">
+                            <Row justify='space-around' align="middle" gutter={[16]}>
                                 <Col xs={6} sm={5} lg ={4}>
                                     <Image src={PlaceOrder} />
                                 </Col>
@@ -352,7 +394,7 @@ function WhenGo(){
                             </Row>
                         </TabPane>
                         <TabPane tab= {'Payment'} key='2'>
-                        <Row justify='space-around' align="middle">
+                        <Row justify='space-around' align="middle" gutter={[16]}>
                                 <Col xs={6} sm={5} lg ={4}>
                                     <Image src={PaymentMockup} />
                                 </Col>
@@ -370,7 +412,7 @@ function WhenGo(){
                             </Row>
                         </TabPane>
                         <TabPane tab= 'Order Tracking' key='3'>
-                        <Row justify='space-around' align="middle">
+                        <Row justify='space-around' align="middle" gutter={[16]}>
                                 <Col xs={6} sm={5} lg ={4}>
                                     <Image src={OrderTracking} />
                                 </Col>
@@ -388,7 +430,7 @@ function WhenGo(){
                             </Row>
                         </TabPane>
                         <TabPane tab= 'Complete Order' key='4'>
-                            <Row justify='space-around' align="middle">
+                            <Row justify='space-around' align="middle" gutter={[16]}>
                                     <Col xs={6} sm={5} lg ={4}>
                                         <Image src={CompleteOrder} />
                                     </Col>
@@ -407,50 +449,53 @@ function WhenGo(){
                         </TabPane>
                     </Tabs>
                 </div>
-            </div>
-            <section className="div-spacing">
-                <div  style={{width: '90%', margin: '0 auto'}}>
-                    <Row justify="space-around" align="middle" >
-                        <Col xs={24} sm={24} md={12} >
-                            <Space direction="vertical" size='small'>
-                                <Title className="title">About Us</Title>
-                                <div className="text-justify">
-                                    <Text className="text">
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                                        It has survived not only five centuries, but also the leap into electronic typesetting, remaining
-                                        essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing 
-                                        Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including
-                                        versions of Lorem Ipsum.There are many variations of passages of Lorem Ipsum available, but the majority 
-                                        have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
-                                    </Text>
-                                </div>
-                            </Space>
-                        </Col>
-                        <Col xs={24} sm={24} md={11}>
-                            <Image width={'98%'} src={AboutUs}/>
-                        </Col>
-                    </Row>
-                </div>
             </section>
+
+            {/* ******************* QUESTIONS ***************** */}
             <section className="background-color">
                 <div className="position width-80">
                     <div className="text-center">
                         <Title className="title">Frequently Asked Questions</Title>
                     </div>
                     <Collapse defaultActiveKey={['1']} onChange={onChange} ghost >  
-                        <Panel showArrow= {false} header="What type of vehicale you providing" key="1" extra={genExtra()} className="services-card question-card card-title color">
-                            <Text className="text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</Text>
+                        <Panel 
+                            showArrow= {false} 
+                            header="What type of vehicale you providing" 
+                            key="1" 
+                            extra={genExtra()} 
+                            className="services-card question-card card-title "
+                        >
+                            <Text className="text">
+                                There are many variations of passages of Lorem Ipsum available, 
+                                but the majority have suffered alteration in some form, by injected humour,
+                                 or randomised words which don't look even slightly believable.
+                            </Text>
                         </Panel>
-                        <Panel showArrow = {false} header="How do i become a driver" key="2" extra={genExtra2()} className="services-card question-card card-title">
-                            <Text className="text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</Text>
+                        <Panel showArrow = {false} header="How do i become a driver" key="2" extra={genExtra2()}
+                            className="services-card question-card card-title"
+                         >
+                            <Text className="text">
+                                There are many variations of passages of Lorem Ipsum available, 
+                                but the majority have suffered alteration in some form, by injected humour, 
+                                or randomised words which don't look even slightly believable.
+                            </Text>
                         </Panel>
-                        <Panel showArrow = {false} header="How do i contact customer" key="3" extra={genExtra3()} className="services-card question-card card-title">
-                            <Text className="text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</Text>
+                        <Panel showArrow = {false} header="How do i contact customer" key="3" extra={genExtra3()} 
+                            className="services-card question-card card-title"
+                            >
+                            <Text className="text">
+                                There are many variations of passages of Lorem Ipsum available,
+                                 but the majority have suffered alteration in some form, by injected humour,
+                                  or randomised words which don't look even slightly believable.
+                            </Text>
                         </Panel>
-                        <Panel showArrow = {false} header="How will my transport be inspected" key="4" extra={genExtra4()} className="services-card question-card card-title">
-                            <Text className="text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</Text>
+                        <Panel showArrow = {false} header="How will my transport be inspected" key="4" extra={genExtra4()} 
+                            className="services-card question-card card-title"
+                        >
+                            <Text className="text">There are many variations of passages of Lorem Ipsum available,
+                             but the majority have suffered alteration in some form, by injected humour, 
+                             or randomised words which don't look even slightly believable.
+                        </Text>
                         </Panel>
                     </Collapse>
                 </div>
@@ -460,13 +505,17 @@ function WhenGo(){
                 <div style={{width: '90%', margin: '0 auto',}}>
                     <Row justify="space-around" align="middle" gutter={[24, 24]} >
                         <Col xs={24} sm={24} md={24} lg={11} >
-                            <Image src={Contact} />
+                            <img src={Contact} className = 'display-block display-block-get width'/>
                         </Col>
-                        <Col xs={24} sm={24} md={24} lg={12} >
-                            <div >    
-                                <Title className="title">Get In Touch</Title>
-                                <Text className="text">Lets Start Something New! Just ask get answers</Text>
-                                <br/>
+                        <Col xs={22} sm={24} md={24} lg={12} >
+                            <div >
+                                <div className="display-center">
+                                    <Title className="title">Get In Touch</Title>
+                                    <Text className="text">Lets Start Something New! Just ask get answers</Text>
+                                    <br/>
+                                    <img src={Contact} className='display-hide display-hide-get'/>
+                                </div>
+
                                 <br/>
                                 <Form 
                                     layout="vertical"
@@ -511,14 +560,15 @@ function WhenGo(){
                     </Row>
                 </div>
             </section>
+            {/* ********************* FOOTER ****************************** */}
             <div className="background-color">
                 <div style={{width: '85%', margin: '0 auto', paddingTop: '45px'}}>
                     <Row justify="space-around" align="top" gutter={[16, 16]}>
-                        <Col xs={24} sm={24} md={24} lg={6} className='text-center'>
+                        <Col xs={{span: 24, order: 1}} sm={24} md={24} lg={6} className='text-center'>
                             <Image src={WhiteLogo}/>
                             <br/>
                             <br/>
-                            <div className="text-justify ine-width position">
+                            <div className="text-justify ine-width position abled">
                                 <Text className="text">We are experienced professional who understand that it services is changing, and are true partners who care about your futures success</Text>
                             </div>
                         </Col>
@@ -531,9 +581,9 @@ function WhenGo(){
                                 <Link href= '#' target = '_blank' style={{color: 'black'}}>Our Team</Link>
                             </Space>
                         </Col>
-                        <Col xs={24} sm={24} md={24} lg={7} className='text-center'>
+                        <Col xs={{span: 24, order: 3}} sm={24} md={24} lg={7} className='display-center'>
                             <Space direction="vertical">
-                                <Title level={2}>Contact Us</Title>
+                                <Title level={2} className="abled">Contact Us</Title>
                                 <div>
                                     <Space>
                                         <Image width={20} src={Location} />
@@ -551,8 +601,8 @@ function WhenGo(){
                                 </div>
                             </Space>
                         </Col>
-                        <Col xs={24} sm={24} md={24} lg={6} className="text-center">
-                            <Title level={2} >Follow Us</Title>
+                        <Col xs={{span: 24, order: 2}} sm={24} md={24} lg={6} className="text-center">
+                            <Title level={2} className="abled">Follow Us</Title>
                             <Space size={'large '}>
                                 <TwitterOutlined style={{fontSize: '20px', color: '#3b9850', marginRight: 10}}/>
                                 <LinkedinFilled style={{fontSize: '20px', color: '#3b9850', marginRight: 10}}/>
